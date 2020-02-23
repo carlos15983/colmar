@@ -1,162 +1,276 @@
-body {
-    width: 100%;
-    display: grid;
-    grid-template: repeat(48, 50px) / repeat(12, 1fr);
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-sans-serif;
 
+}
+body {
+    background-color: #ccc;
+
+}
+.wrapper {
+    display: grid;
 
 }
 header {
-    display: inline;
-    width: 100%;
-    grid-column: 1 / span 12;
-    background-color: red;
-    margin-bottom: 10px;
-    padding: 2px;
+    background-color: white;
+    padding: 10px 24px;
 }
 span {
     float: right;
 }
-.banner {
-    display: inline-flex;
-    background-color: gray;
-    background-size: cover;
-    grid-column: 1 / span 12;
-    grid-row: 2 / span 12;
-    align-items: center;
-    justify-content: space-around;
-    padding: 32px 24px;
-}
-.banner img {
-    margin: 32px 24px;
-    max-height: 500px;
-}
-.learn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 24px;
-
-
-}
-.learn h2 {
-    margin-top: 32px;
-    margin-bottom: 0;
+#learn {
     font-size: 40px;
 }
-.learn h5 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-size: 1.35em;
-}
-.learn p {
-    background-color: green;
-
-    padding: 8px 110px;
-    color: white
-
-}
-.banner-2 {
-    display: inline-flex;
-    grid-column: 1 / span 12;
-    grid-row: 14 / span 17;
-    align-items: center;
-    justify-content: space-around;
-    align-items: flex-start;
-    background-color: yellow;
-    background-size: cover;
+.container-one {
+    display: grid;
+    height: 400px;
+    grid-gap: 24px;
     padding: 32px 24px;
-    width: 100%;
-}
-.sub img {
-    margin-right: 24px;
-    width: 100%;
-    max-height: 450px;
-}
-.sub {
-    margin-right: 24px;
-    flex: 3;
-}
-.sub-2 {
-    flex: 2;
-}
-
-.sub h1 {
-    display: flex;
+    grid-template-columns: 3fr 2fr;
     justify-content: center;
-    font-size: 45px;
+
 }
-.orientation {
+.showcase-one {
+    background-image: url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    width:100%;
+}
+.box-one {
     display: flex;
-    width: 100%;
-    background-color: green;
-    margin-bottom: 24px;
-    padding: 16px;
+    flex-direction: column;
+    margin-left: 24px;
+    padding-right: 32px;
+    justify-content: center;
 
 }
-.campus {
-    display: inline-flex;
-    width: 100%;
-    background-color: green;
-    margin-bottom: 24px;
-    padding: 16px;
+#start {
+    text-align: center;
+    color: white;
+    background-color: #696969;
+    padding: 8px 0px;
 }
-.guest {
-    display: inline-flex;
-    width: 100%;
-    background-color: green;
-    padding: 16px;
+.container-two {
+    display: grid;
+    grid-gap: 24px;
+    padding: 32px 0px 32px 24px;
+    grid-template-columns: 3fr 2fr;
+    background-color: white;
+}
+.photo-two {
+    background-image: url(images/information-main.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+.box-two {
+    display: grid;
+    height: 500px;
+    grid-template-rows: repeat(3, 1fr);
+    border: 0.5px solid #ddd;
+}
+.box-two-a {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 35% 65%;
+    padding: 16px 0px;
+    border: 0.5px solid #ddd;
+}
+.img-a {
+    background-image: url(images/information-orientation-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 16px;
+}
+.info-a {
+    padding-right: 16px;
+    font-size: 0.85em;
+}
+.box-two-b {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 35% 65%;
+    padding: 16px 0px;
+        border: 0.5px solid #ddd;
+}
+.img-b {
+    background-image: url(images/information-campus-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 16px;
+}
+.info-b {
+    padding-right: 16px;
+    font-size: 0.85em;
+}
+
+.box-two-c {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 35% 65%;
+    padding: 16px 0px;
+    border: 0.5px solid #ddd;
+}
+.img-c {
+    background-image: url(images/information-guest-lecture-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 16px;
+}
+.info-c {
+    padding-right: 16px;
+    font-size: 0.85em;
+}
+.start {
+    text-align: center;
+    padding: 8px 0px;
+}
+.box-three {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 300px;
+    padding: 8px 92px 50px 92px;
+}
+.box-three-d {
+    display: flex;
+    flex-direction: column;
+
+}
+.img-d {
+    background-image: url(images/course-software.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+.box-three-e {
+    display: flex;
+    flex-direction: column;
+}
+.img-e {
+    background-image: url(images/course-computer-art.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+#info-e {
+    padding-bottom: 0px;
+}
+.box-three-f {
+    display: flex;
+    flex-direction: column;
+
+}
+.img-f {
+    background-image: url(images/course-design.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+.box-three-g {
+    display: flex;
+    flex-direction: column;
+
+}
+.img-g {
+    background-image: url(images/course-data.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+.box-three-h {
+    display: flex;
+    flex-direction: column;
+
+}
+.img-h {
+    background-image: url(images/course-business.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+.box-three-i {
+    display: flex;
+    flex-direction: column;
+
+}
+.img-i {
+    background-image: url(images/course-marketing.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+}
+.border-three {
+    border: 0.5px solid #ddd
 }
 
 
-/* Mobile Area */
-@media only screen and (max-width: 500px) {
-    body {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+.pad {
+    padding: 16px;
+    background-color: white;
+}
+a {
+    text-decoration: none;
+}
+.container-four {
+    display: grid;
+    grid-gap: 24px;
+    padding: 32px 0px 32px 24px;
+    grid-template-columns: 2fr 3fr;
+    background-color: white;
+}
 
-    }
-    header {
-        display: inline;
-        width: 100%;
+.box-four {
+    display: grid;
+    height: 500px;
+    grid-template-rows: repeat(3, 1fr);
 
-    }
-    span {
-        float: right;
-    }
-    .banner {
-
-        background-color: gray;
-        flex-direction: column;
-    }
-    .banner img {
-        margin: 0;
-        width: 100%;
-        height: 250px;
-    }
-    .learn{
-        margin: 0 16px;
-
-    }
-
-    .learn h2 {
-        margin-bottom: 0;
-        font-size: 35px;
-        line-height: 1.25em;
-    }
-    .learn h5 {
-
-        font-size: 1.35em;
-
-    }
-    .learn p {
-        margin-top: 0;
-        width: 100%
-        background-color: green;
-        padding: 8px 110px;
-        color: white
-
-    }
+}
+.box-four-j {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 35% 65%;
+    padding: 16px 0px;
+    border: 0.5px solid #ddd;
+    background-color: #ddd;
+}
+.img-j {
+    background-image: url(images/information-orientation-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 16px;
+}
+.info-j {
+    padding-right: 16px;
+    font-size: 0.85em;
+}
+.box-four-k {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 35% 65%;
+    padding: 16px 0px;
+    border: 0.5px solid #ddd;
+}
+.img-k {
+    background-image: url(images/information-campus-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 16px;
+}
+.info-k {
+    padding-right: 16px;
+    font-size: 0.85em;
+}
+.video {
+    width: 100%;
+}
+.thesis {
+    text-align: center;
+    background-color: white;
+    padding: 8px 0px;
+}
+footer {
+    border-top: 0.5px solid #ddd;
+    background-color: white;
+    padding: 0px 24px 40px 24px;
 }
