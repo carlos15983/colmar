@@ -1,22 +1,32 @@
 html {
-    box-sizing: border-box;
+
     font-family: Arial, Helvetica, sans-sans-serif;
 
 }
 body {
+    display: grid;
     background-color: #ccc;
 
 }
 .wrapper {
-    display: grid;
+
 
 }
 header {
     background-color: white;
+    width: 100%;
     padding: 10px 24px;
+    width: 100%;
+    display: inline-block;
+}
+.none {
+    display: none;
 }
 span {
     float: right;
+}
+.sign-in {
+
 }
 #learn {
     font-size: 40px;
@@ -31,7 +41,7 @@ span {
 
 }
 .showcase-one {
-    background-image: url(images/banner.jpg);
+    background: url(images/banner.jpg);
     background-position: center;
     background-size: cover;
     width:100%;
@@ -153,8 +163,7 @@ span {
     background-position: center;
     height: 45%;
 }
-#info-e {
-    padding-bottom: 0px;
+
 }
 .box-three-f {
     display: flex;
@@ -273,4 +282,190 @@ footer {
     border-top: 0.5px solid #ddd;
     background-color: white;
     padding: 0px 24px 40px 24px;
+}
+
+@media(max-width: 500px) {
+.wrapper {
+    width: auto;
+}
+
+}
+
+header {
+    display: none;
+}
+.none {
+    display: flex;
+    width: auto;
+}
+.none i {
+    flex: 1;
+}
+.container-one {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas:
+        'showcase-one'
+        'showcase-one'
+        'box-one';
+        padding: 0px;
+        height: 700px;
+
+}
+.showcase-one {
+    height: 300px;
+}
+.box-one {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    padding-right: 0px;
+    justify-content: center;
+}
+.container-two {
+    grid-template-columns: none;
+    grid-template-areas:
+        'photo-two'
+        'box-two';
+        padding: 0px;
+}
+.box-two-a {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas:
+        'img-a'
+        'img-a'
+        'info-a'
+    padding: 16px 0px;
+    border: none;
+    width: 100%;
+}
+.img-a {
+    background-image: url(images/information-campus-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 16px;
+    height: 150px;
+}
+.info-a {
+    padding-left: 24px;
+    font-size: 0.85em;
+}
+.box-two {
+    display: grid;
+    height: auto;
+    grid-template-rows: none;
+    grid-template-areas:
+        'box-two-a'
+        'box-two-b'
+        'box-two-c'
+    border: 0.5px solid #ddd;
+}
+.box-two-b {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas:
+        'img-b'
+        'img-b'
+        'info-b'
+    padding: 16px 0px;
+    border: none;
+    width: 100%;
+}
+.img-b {
+    background-image: url(images/information-campus-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 16px;
+    height: 150px;
+}
+.info-b {
+    padding-left: 24px;
+    font-size: 0.85em;
+}
+
+.box-two-c {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-areas:
+        'img-c'
+        'img-c'
+        'info-c'
+    padding: 16px 0px;
+    border: none;
+    width: 100%;
+}
+.img-c {
+    background-image: url(images/information-campus-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 16px;
+    height: 150px;
+}
+.info-c {
+    padding-left: 24px;
+    font-size: 0.85em;
+}
+
+.container-three {
+    grid-gap: 16px;
+    grid-template-columns: none;
+    grid-template-areas:
+        'start'
+        'box-three';
+        padding: 0px;
+    background-color: white;
+}
+.box-three {
+    grid-template-columns: none;
+    height: 650px;
+    grid-auto-rows: 80px;
+    grid-template-areas:
+        'start'
+        'box-three-d'
+        'box-three-e'
+        'box-three-f'
+        'box-three-g'
+        'box-three-h';
+    padding: 8px 0px 0px 0px;
+}
+.container-four {
+    grid-template-areas:
+        'thesis'
+        'showcase-four';
+}
+.box-four {
+    display: none;
+}
+.video {
+    display: grid;
+}
+.thesis {
+    margin-top: 24px;
+}
+.img-d,
+.img-e,
+.img-f,
+.img-g,
+.img-h,
+.img-i,
+.container-three p
+{
+    display: none;
+}
+.info-d,
+.info-e,
+.info-f,
+.info-g,
+.info-h,
+.info-i
+{
+    margin: 10px;
+    background-color: #ddd;
+}
+.start {
+    background-color: white;
+}
+
+
 }
