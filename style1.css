@@ -9,7 +9,8 @@ body {
 
 }
 .wrapper {
-
+    display: grid;
+    grid-gap: 20px;
 
 }
 header {
@@ -33,11 +34,10 @@ span {
 }
 .container-one {
     display: grid;
-    height: 400px;
     grid-gap: 24px;
     padding: 32px 24px;
     grid-template-columns: 3fr 2fr;
-    justify-content: center;
+    grid-auto-rows: 500px;
 
 }
 .showcase-one {
@@ -75,7 +75,6 @@ span {
 }
 .box-two {
     display: grid;
-    height: 500px;
     grid-template-rows: repeat(3, 1fr);
     border: 0.5px solid #ddd;
 }
@@ -140,82 +139,71 @@ span {
     grid-gap: 24px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 300px;
-    padding: 8px 92px 50px 92px;
+    padding: 8px 92px 8px 92px;
 }
 .box-three-d {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 
 }
 .img-d {
     background-image: url(images/course-software.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
 .box-three-e {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 }
 .img-e {
     background-image: url(images/course-computer-art.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
 
-}
 .box-three-f {
-    display: flex;
-    flex-direction: column;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 }
 .img-f {
-    background-image: url(images/course-design.jpg);
+    background-image: url(images/course-computer-art.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
 .box-three-g {
-    display: flex;
-    flex-direction: column;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 }
 .img-g {
     background-image: url(images/course-data.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
 .box-three-h {
-    display: flex;
-    flex-direction: column;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 }
 .img-h {
     background-image: url(images/course-business.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
 .box-three-i {
-    display: flex;
-    flex-direction: column;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2fr 3fr;
 }
 .img-i {
     background-image: url(images/course-marketing.jpg);
     background-size: cover;
     background-position: center;
-    height: 45%;
 }
-.border-three {
-    border: 0.5px solid #ddd
-}
-
-
 .pad {
-    padding: 16px;
     background-color: white;
 }
 a {
@@ -284,10 +272,8 @@ footer {
     padding: 0px 24px 40px 24px;
 }
 
-@media(max-width: 500px) {
-.wrapper {
-    width: auto;
-}
+@media only screen and (max-width: 1000px) {
+.wrapper{
 
 }
 
@@ -300,74 +286,95 @@ header {
 }
 .none i {
     flex: 1;
+    text-align: center;
 }
 .container-one {
     display: grid;
+    position: relative;
     grid-template-columns: none;
+    grid-auto-rows: none;
     grid-template-areas:
         'showcase-one'
         'showcase-one'
+        'box-one'
         'box-one';
         padding: 0px;
-        height: 700px;
-
+        width: 100%;
+        margin: 0;
 }
 .showcase-one {
-    height: 300px;
+    grid-area: showcase-one;
 }
+
 .box-one {
+    grid-area: box-one;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
-    padding-right: 0px;
-    justify-content: center;
+    padding: 0px;
+    justify-content: flex-end;
+    font-size: 2em;
 }
 .container-two {
+    position: relative;
     grid-template-columns: none;
     grid-template-areas:
-        'photo-two'
+        'showcase-two'
         'box-two';
         padding: 0px;
 }
-.box-two-a {
+.showcase-two {
     display: grid;
-    grid-template-columns: none;
-    grid-template-areas:
-        'img-a'
-        'img-a'
-        'info-a'
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+    height: 1000px;
+    grid-area: showcase-two;
+}
+.practice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+.photo-two {
+    background-image: url(images/information-main.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.box-two-a {
+    grid-area: box-two-a;
+    display: flex;
+    flex-direction: column;
     padding: 16px 0px;
     border: none;
     width: 100%;
 }
 .img-a {
-    background-image: url(images/information-campus-mobile.jpg);
+    background-image: url(images/information-orientation-mobile.jpg);
     background-size: cover;
     background-position: center;
     margin: 0 16px;
-    height: 150px;
+    height: 70%;
 }
 .info-a {
     padding-left: 24px;
-    font-size: 0.85em;
+    font-size: 3em;
 }
 .box-two {
     display: grid;
-    height: auto;
     grid-template-rows: none;
     grid-template-areas:
         'box-two-a'
         'box-two-b'
-        'box-two-c'
+        'box-two-c';
     border: 0.5px solid #ddd;
+    height: 2700px;
 }
 .box-two-b {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-areas:
-        'img-b'
-        'img-b'
-        'info-b'
+    display: flex;
+    flex-direction: column;
+    grid-area: box-two-b;
     padding: 16px 0px;
     border: none;
     width: 100%;
@@ -377,34 +384,31 @@ header {
     background-size: cover;
     background-position: center;
     margin: 0 16px;
-    height: 150px;
+    height: 70%;
 }
 .info-b {
     padding-left: 24px;
-    font-size: 0.85em;
+    font-size: 3em;
 }
 
 .box-two-c {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-areas:
-        'img-c'
-        'img-c'
-        'info-c'
+    display: flex;
+    flex-direction: column;
+    grid-area: box-two-c;
     padding: 16px 0px;
     border: none;
     width: 100%;
 }
 .img-c {
-    background-image: url(images/information-campus-mobile.jpg);
+    background-image: url(images/information-guest-lecture-mobile.jpg);
     background-size: cover;
     background-position: center;
     margin: 0 16px;
-    height: 150px;
+    height: 70%;
 }
 .info-c {
     padding-left: 24px;
-    font-size: 0.85em;
+    font-size: 3em;
 }
 
 .container-three {
@@ -415,13 +419,13 @@ header {
         'box-three';
         padding: 0px;
     background-color: white;
+    height: 1360px;
 }
 .box-three {
     grid-template-columns: none;
-    height: 650px;
-    grid-auto-rows: 80px;
+
+    grid-auto-rows: 200px;
     grid-template-areas:
-        'start'
         'box-three-d'
         'box-three-e'
         'box-three-f'
@@ -430,18 +434,30 @@ header {
     padding: 8px 0px 0px 0px;
 }
 .container-four {
+    grid-template-columns: none;
     grid-template-areas:
-        'thesis'
         'showcase-four';
+}
+.showcase-four {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+    height: 1000px;
+
+}
+.urban {
+    font-size: 3rem;
 }
 .box-four {
     display: none;
 }
 .video {
-    display: grid;
+
+    width: auto;
 }
 .thesis {
-    margin-top: 24px;
+    font-size: 2.5rem;
+    background-color: inherit;
 }
 .img-d,
 .img-e,
@@ -460,12 +476,24 @@ header {
 .info-h,
 .info-i
 {
+    height: 100%;
     margin: 10px;
     background-color: #ddd;
+
+    text-align: center;
+    font-size: 2em;
+
 }
 .start {
-    background-color: white;
-}
+    font-size: 2.5rem;
 
+}
+#start {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#learn {
+    font-size: 120px;
+}
 
 }
